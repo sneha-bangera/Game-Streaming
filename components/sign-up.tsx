@@ -133,14 +133,16 @@ export default function SignUp() {
                   password,
                   name: username,
                   image: image ? await convertImageToBase64(image) : "",
-                  callbackURL: "/dashboard",
+                  callbackURL: "/events",
                   fetchOptions: {
                     onResponse: () => setLoading(false),
                     onRequest: () => setLoading(true),
                     onError: async (ctx: ErrorContext) => {
-                    toast.error(ctx.error.message);
-                                           },
-                    onSuccess: async () => router.push("/dashboard"),
+                      toast.error(ctx.error.message);
+                    },
+                    onSuccess: async () => {
+                      window.location.href = '/profile';
+                    },
                   },
                 });
               }}

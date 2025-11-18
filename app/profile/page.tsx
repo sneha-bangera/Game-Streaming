@@ -49,6 +49,24 @@ export default function PlayerProfile() {
     { label: 'AoR', value: '85.37', sub: '89.34' },
   ];
 
+  const user = {
+    name: 'FAKER',
+    email: 'faker@example.com',
+    image: '/api/placeholder/300/300',
+  };
+
+  const getInitials = () => {
+    if (user.name) {
+      return user.name
+        .split(' ')
+        .map((n) => n[0])
+        .join('')
+        .toUpperCase()
+        .substring(0, 2);
+    }
+    return user.email.substring(0, 2).toUpperCase();
+  };
+
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Header */}
@@ -101,11 +119,17 @@ export default function PlayerProfile() {
           {/* Left Column - Player Info */}
           <div className="col-span-3">
             <div className="bg-gray-900 rounded-lg overflow-hidden">
-              <img
-                src="/api/placeholder/300/300"
-                alt="Player"
-                className="w-full aspect-square object-cover bg-gray-800"
-              />
+              {user.image ? (
+                <img
+                  src={user.image}
+                  alt={user.name || 'Profile'}
+                  className="w-full aspect-square object-cover border-2 border-orange-500"
+                />
+              ) : (
+                <div className="w-full aspect-square bg-gray-700 flex items-center justify-center text-4xl font-bold text-gray-300">
+                  {getInitials()}
+                </div>
+              )}
               <div className="p-4 text-center text-xs text-gray-500">
                 RECENT FORM
               </div>
@@ -118,8 +142,8 @@ export default function PlayerProfile() {
             <div className="mb-6">
               <div className="flex items-end justify-between mb-4">
                 <div>
-                  <h1 className="text-4xl font-bold mb-2">FAKER</h1>
-                  <p className="text-sm text-gray-400">FAKER [INA] Top 20 IGL 27 years</p>
+                  <h1 className="text-4xl font-bold mb-2">{user.name}</h1>
+                  <p className="text-sm text-gray-400">{user.email}</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="px-4 py-2 border border-gray-700 rounded text-sm hover:bg-gray-800">

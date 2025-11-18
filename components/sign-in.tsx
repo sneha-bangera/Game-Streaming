@@ -73,7 +73,10 @@ export default function SignIn() {
                   { email, password },
                   {
                     onRequest: () => setLoading(true),
-                    onResponse: () => setLoading(false),
+                    onResponse: () => {
+                      setLoading(false);
+                      window.location.href = '/profile';
+                    },
                   }
                 );
               }}
@@ -90,11 +93,14 @@ export default function SignIn() {
                 await signIn.social(
                   {
                     provider: "google",
-                    callbackURL: "/dashboard",
+                    callbackURL: "/events",
                   },
                   {
                     onRequest: () => setLoading(true),
-                    onResponse: () => setLoading(false),
+                    onResponse: () => {
+                      setLoading(false);
+                      window.location.href = '/events';
+                    },
                   }
                 );
               }}
