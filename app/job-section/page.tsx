@@ -91,34 +91,6 @@ export default function JobPortal() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-8">
-              <div className="text-xl font-bold">HIATEK</div>
-              <div className="hidden md:flex space-x-6">
-                <a href="#" className="text-gray-300 hover:text-white">Home</a>
-                <a href="#" className="text-gray-300 hover:text-white">Find Job</a>
-                <a href="#" className="text-gray-300 hover:text-white">Employers</a>
-                <a href="#" className="text-gray-300 hover:text-white">Candidates</a>
-                <a href="#" className="text-gray-300 hover:text-white">Pricing Plans</a>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <button className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-lg transition">
-                Post A Job
-              </button>
-            </div>
-            <button 
-              className="md:hidden text-white"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </nav>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (

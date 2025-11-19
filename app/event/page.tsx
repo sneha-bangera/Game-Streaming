@@ -61,21 +61,9 @@ export default function EventsPage() {
 
   return (
     <div className="min-h-screen bg-gray-950">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-sm border-b border-gray-800">
-        <div className="flex items-center gap-4 px-6 py-4">
-          <button className="text-white hover:text-gray-300">
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <div className="flex items-center gap-2">
-            <div className="text-3xl font-bold text-orange-500">H</div>
-            <span className="text-white text-xl font-semibold">Event</span>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
-      <div className="relative pt-16">
+      <div className="relative">
         <div className="relative h-[400px] overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-gray-950">

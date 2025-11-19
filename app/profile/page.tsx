@@ -69,44 +69,6 @@ export default function PlayerProfile() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* Header */}
-      <header className="border-b border-gray-800 bg-gray-900">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-8">
-            <div className="text-3xl font-bold text-orange-400">H</div>
-            <nav className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white">Matches</a>
-              <a href="#" className="text-gray-400 hover:text-white">Teams</a>
-              <a href="#" className="text-white border-b-2 border-orange-400 pb-1">Players</a>
-              <a href="#" className="text-gray-400 hover:text-white">Competition</a>
-              <a href="#" className="text-gray-400 hover:text-white">Tutorials</a>
-              <a href="#" className="text-gray-400 hover:text-white">Preps</a>
-              <a href="#" className="text-gray-400 hover:text-white">Support</a>
-            </nav>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
-              <input
-                type="text"
-                placeholder="Search player, team..."
-                className="bg-gray-800 border border-gray-700 rounded px-9 py-2 text-sm w-64 focus:outline-none focus:border-gray-600"
-              />
-            </div>
-            <button className="text-sm text-gray-400 hover:text-white">Faker *</button>
-          </div>
-        </div>
-        <div className="flex items-center justify-center gap-6 py-4 border-t border-gray-800">
-          <div className="w-10 h-10 bg-gray-800 rounded flex items-center justify-center">
-            <span className="text-xs">LoL</span>
-          </div>
-          <div className="w-10 h-10 bg-gray-800 rounded opacity-50"></div>
-          <div className="w-10 h-10 bg-gray-800 rounded opacity-50"></div>
-          <div className="w-10 h-10 bg-gray-800 rounded opacity-50"></div>
-          <div className="w-10 h-10 bg-gray-800 rounded opacity-50"></div>
-          <div className="w-10 h-10 bg-gray-800 rounded opacity-50"></div>
-        </div>
-      </header>
 
       {/* Breadcrumb */}
       <div className="px-6 py-3 text-xs text-gray-500">

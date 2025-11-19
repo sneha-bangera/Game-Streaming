@@ -9,18 +9,6 @@ export default function EventBookingPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-20 p-4 flex items-center gap-3">
-        <button className="text-white">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <div className="flex items-center gap-2">
-          <div className="text-amber-500 font-serif text-2xl">H</div>
-          <span className="text-sm">Event</span>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <div className="relative h-screen">

@@ -95,34 +95,6 @@ export default function JobPortal() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="bg-gradient-to-r from-purple-600 to-purple-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-8">
-              <div className="text-xl font-bold">HEAVEN</div>
-              <div className="hidden md:flex space-x-6">
-                <a href="#" className="text-white/90 hover:text-white">Home</a>
-                <a href="#" className="text-white/90 hover:text-white">Find Job</a>
-                <a href="#" className="text-white/90 hover:text-white">Employers</a>
-                <a href="#" className="text-white/90 hover:text-white">Candidates</a>
-                <a href="#" className="text-white/90 hover:text-white">Pricing Plans</a>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded-lg transition">
-                Post A Job
-              </button>
-            </div>
-            <button 
-              className="md:hidden text-white"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section with Gradient */}
       <div className="bg-gradient-to-r from-purple-600 to-purple-700 py-16 px-4">

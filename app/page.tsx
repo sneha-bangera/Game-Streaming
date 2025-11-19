@@ -107,7 +107,6 @@ function ModelViewer({ modelPath }: { modelPath: string }) {
   return <div ref={containerRef} className="w-full h-full" />;
 }
 
-
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -119,6 +118,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -133,25 +133,7 @@ export default function HomePage() {
         </svg>
       </div>
 
-
-      <nav className="relative z-50 flex items-center justify-between px-8 py-6">
-        <div className="flex items-center gap-3">
-          <Image src="/logo.png" alt='logo' width={100} height={100}/>
-          <span className="text-2xl font-bold tracking-wider">HEAVEN</span>
-        </div>
-        
-        {/* <div className="flex items-center gap-12">
-          <a href="#" className="hover:text-orange-400 transition-colors">Home</a>
-          <a href="#" className="hover:text-orange-400 transition-colors">About us</a>
-          <a href="#" className="hover:text-orange-400 transition-colors">News</a>
-        </div> */}
-
-        <Link href='/login'><button className="bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer">
-          LOGIN/SIGNUP
-        </button></Link>
-      </nav>
-
-
+      {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-8 pt-20 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -177,7 +159,7 @@ export default function HomePage() {
 
           <div className="relative flex items-center justify-center h-[600px]">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-              <div 
+            <div 
               className="relative w-full h-full z-10"
               style={{ transform: `translateY(${scrollY * 0.1}px)` }}
             >
@@ -187,19 +169,20 @@ export default function HomePage() {
         </div>
       </div>
 
-
+      {/* Background Text */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
         <h2 className="text-[20rem] font-bold text-gray-800 opacity-50 whitespace-nowrap leading-none">
           HEAVEN
         </h2>
       </div>
 
+      {/* Animated Dots */}
       <div className="absolute top-1/4 left-10 w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
       <div className="absolute top-1/3 right-20 w-6 h-6 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
       <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-orange-300 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-   
-   {/* //Added part to extende hte home page */}
-   <section className="relative z-10 container mx-auto px-8 py-20">
+
+      {/* Trending Games Section */}
+      <section className="relative z-10 container mx-auto px-8 py-20">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl font-bold">Currently Trending Games</h2>
           <button className="bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300">
@@ -209,10 +192,10 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { title: 'Action Game', image: '/game1.jpg', players: '40 Thousand+' },
-            { title: 'Strategy Game', image: '/game2.jpg', players: '40 Thousand+' },
-            { title: 'RPG Game', image: '/game3.jpg', players: '40 Thousand+' },
-            { title: 'Adventure Game', image: '/game4.jpg', players: '40 Thousand+' }
+            { title: 'Action Game', players: '40 Thousand+' },
+            { title: 'Strategy Game', players: '40 Thousand+' },
+            { title: 'RPG Game', players: '40 Thousand+' },
+            { title: 'Adventure Game', players: '40 Thousand+' }
           ].map((game, index) => (
             <div key={index} className="group relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-orange-400 transition-all duration-300 transform hover:scale-105 cursor-pointer">
               <div className="aspect-square bg-gradient-to-br from-orange-500/20 to-purple-500/20 flex items-center justify-center">
@@ -341,15 +324,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-   
-   
-   
     </div>
-
-
-
-
   );
-
-  
 }
