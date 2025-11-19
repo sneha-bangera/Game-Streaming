@@ -24,14 +24,14 @@ export default function Navbar() {
             Home
           </Link>
           <Link 
-            href="/events" 
-            className={`hover:text-orange-400 transition ${pathname === '/events' ? 'text-orange-400' : ''}`}
+            href="/event" 
+            className={`hover:text-orange-400 transition ${pathname === '/event' ? 'text-orange-400' : ''}`}
           >
             Events
           </Link>
           <Link 
-            href="/about" 
-            className={`hover:text-orange-400 transition ${pathname === '/about' ? 'text-orange-400' : ''}`}
+            href="/job-section" 
+            className={`hover:text-orange-400 transition ${pathname === '/job-section' ? 'text-orange-400' : ''}`}
           >
             Jobs
           </Link>
