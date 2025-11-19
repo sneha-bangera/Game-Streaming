@@ -44,7 +44,8 @@ export default function SignUp() {
         email,
         password,
         name: username,
-        image: imageBase64,
+        image: imageBase64 || undefined,
+        callbackURL: "/profile",
       });
 
       if (result.error) {
@@ -55,6 +56,7 @@ export default function SignUp() {
         router.refresh();
       }
     } catch (error) {
+      console.error("Sign up error:", error);
       toast.error("An error occurred during sign up");
     } finally {
       setLoading(false);
@@ -76,7 +78,9 @@ export default function SignUp() {
 
           <form onSubmit={handleSignUp} className="flex flex-col gap-5">
             <div>
-              <Label htmlFor="username" className="text-gray-300">Username</Label>
+              <Label htmlFor="username" className="text-gray-300">
+                Username
+              </Label>
               <Input
                 id="username"
                 type="text"
@@ -89,7 +93,9 @@ export default function SignUp() {
             </div>
 
             <div>
-              <Label htmlFor="email" className="text-gray-300">Email</Label>
+              <Label htmlFor="email" className="text-gray-300">
+                Email
+              </Label>
               <Input
                 id="email"
                 type="email"
@@ -102,7 +108,9 @@ export default function SignUp() {
             </div>
 
             <div>
-              <Label htmlFor="password" className="text-gray-300">Password</Label>
+              <Label htmlFor="password" className="text-gray-300">
+                Password
+              </Label>
               <Input
                 id="password"
                 type="password"
@@ -155,12 +163,16 @@ export default function SignUp() {
               className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
               disabled={loading}
             >
-              {loading ? <Loader2 className="animate-spin" size={16} /> : "SIGN UP"}
+              {loading ? (
+                <Loader2 className="animate-spin" size={16} />
+              ) : (
+                "SIGN UP"
+              )}
             </Button>
 
             <p className="text-center text-gray-500 text-sm">
               Already have an account?{" "}
-              <Link href="/login" className="text-orange-500 hover:underline">
+              <Link href="/signin" className="text-orange-500 hover:underline">
                 Sign In
               </Link>
             </p>
@@ -172,7 +184,8 @@ export default function SignUp() {
             <h2 className="text-lg font-semibold text-blue-500">01</h2>
             <p className="font-bold">LEARN AND CONNECT</p>
             <p className="text-gray-400 text-sm">
-              Join a growing community of learners and mentors to build your skills.
+              Join a growing community of learners and mentors to build your
+              skills.
             </p>
           </div>
           <div>
@@ -186,7 +199,8 @@ export default function SignUp() {
             <h2 className="text-lg font-semibold text-blue-500">03</h2>
             <p className="font-bold">SECURE & FAST</p>
             <p className="text-gray-400 text-sm">
-              Enjoy a seamless and secure signup experience powered by modern tech.
+              Enjoy a seamless and secure signup experience powered by modern
+              tech.
             </p>
           </div>
         </div>

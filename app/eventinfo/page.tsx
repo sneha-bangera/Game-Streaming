@@ -8,7 +8,7 @@ export default function EventBookingPage() {
   const [calendar, setCalendar] = useState('');
 
   return (
-    <div className="min-h-screen text-white relative overflow-hidden bg-black">
+    <div className="min-h-screen text-white relative overflow-hidden bg-black mt-28">
       {/* Animated Gradient Background */}
       
 
@@ -112,7 +112,7 @@ export default function EventBookingPage() {
                   </div>
 
                   <p className="text-gray-300 leading-relaxed max-w-xl text-lg">
-                    Join Mumbai's biggest PUBG Mobile tournament featuring 100 teams competing for a prize pool of ₹5 Lakhs. 
+                    Join Mumbai biggest PUBG Mobile tournament featuring 100 teams competing for a prize pool of ₹5 Lakhs. 
                     Experience intense Squad matches, meet pro players, and showcase your gaming skills on the biggest stage.
                   </p>
 
@@ -206,7 +206,7 @@ export default function EventBookingPage() {
                 </h3>
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    Get ready for Mumbai's most anticipated PUBG Mobile tournament of the year! Battlegrounds Mumbai Showdown 
+                    Get ready for Mumbais most anticipated PUBG Mobile tournament of the year! Battlegrounds Mumbai Showdown 
                     brings together the best gaming squads from across Maharashtra for an epic day of competitive gaming.
                   </p>
                   <p>

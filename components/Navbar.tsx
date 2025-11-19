@@ -47,15 +47,15 @@ export default function Navbar() {
               <Image 
                 src={session.user.image || "/profile-icon.png"} 
                 alt="profile" 
-                width={40} 
-                height={40} 
-                className="rounded-full border border-gray-300" 
+                width={50} 
+                height={50} 
+                className="rounded-full border border-gray-300 mr-5" 
               />
-              <span className="font-semibold">{session.user.name}</span>
+              {/* <span className="font-semibold">{session.user.name}</span> */}
             </Link>
             <button 
               onClick={() => signOut()} 
-              className="bg-gray-700 text-white px-3 py-2 rounded-md hover:opacity-80"
+              className="bg-gray-600 text-white px-3 py-2 rounded-md hover:opacity-80"
             >
               Logout
             </button>
