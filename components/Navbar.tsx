@@ -18,8 +18,34 @@ export default function Navbar() {
     <nav className="bg-black text-white p-4 z-1000 fixed top-0 left-0 right-0">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-3">
+<<<<<<< HEAD
           <Image src="/logo.png" alt="logo" width={100} height={100} />
           <span className="text-2xl font-bold tracking-wider">HEAVEN</span>
+=======
+                  <Image src="/logo.png" alt='logo' width={100} height={100}/>
+                  <span className="text-2xl font-bold tracking-wider">HEAVEN</span>
+                </div>
+        
+        <div className="flex gap-6">
+          <Link 
+            href="/" 
+            className={`hover:text-orange-400 transition ${pathname === '/' ? 'text-orange-400' : ''}`}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/event" 
+            className={`hover:text-orange-400 transition ${pathname === '/event' ? 'text-orange-400' : ''}`}
+          >
+            Events
+          </Link>
+          <Link 
+            href="/job-section" 
+            className={`hover:text-orange-400 transition ${pathname === '/job-section' ? 'text-orange-400' : ''}`}
+          >
+            Jobs
+          </Link>
+>>>>>>> 1b9d1eae7a7b7e2eafd35395bada743c4344174c
         </div>
 
         <div className="flex gap-6">
