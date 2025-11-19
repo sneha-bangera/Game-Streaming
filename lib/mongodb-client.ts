@@ -1,5 +1,5 @@
 // lib/mongodb-client.ts
-import { MongoClient, ServerApiVersion } from "mongodb";
+import { MongoClient, ServerApiVersion, Db } from "mongodb";
 
 if (!process.env.MONGODB_URI) {
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
@@ -18,7 +18,6 @@ let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
 if (process.env.NODE_ENV === "development") {
-  // In development mode, use a global variable
   let globalWithMongo = global as typeof globalThis & {
     _mongoClientPromise?: Promise<MongoClient>;
   };
@@ -29,15 +28,13 @@ if (process.env.NODE_ENV === "development") {
   }
   clientPromise = globalWithMongo._mongoClientPromise;
 } else {
-  // In production mode, it's best to not use a global variable
   client = new MongoClient(uri, options);
   clientPromise = client.connect();
 }
 
-// Export both the client promise and a db getter
-export default clientPromise;
+// Export database promise (NOT client promise)
+const dbPromise: Promise<Db> = clientPromise.then((client) => 
+  client.db("game")
+);
 
-export async function getDatabase() {
-  const client = await clientPromise;
-  return client.db(); // Uses default database from connection string
-}
+export default dbPromise;

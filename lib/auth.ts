@@ -1,9 +1,11 @@
+// lib/auth.ts
 import { betterAuth } from "better-auth";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import clientPromise from "./mongodb-client";
 
 export const auth = betterAuth({
-  database: mongodbAdapter(clientPromise),
+  database: {
+    provider: "mongodb",
+    url: process.env.MONGODB_URI!,
+  },
   emailAndPassword: {
     enabled: true,
   },

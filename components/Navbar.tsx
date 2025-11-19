@@ -36,9 +36,7 @@ export default function Navbar() {
             Jobs
           </Link>
 
-           <Link href='/login'><button className="bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer">
-          LOGIN/SIGNUP
-        </button></Link>
+      
         </div>
 
         {isPending ? (

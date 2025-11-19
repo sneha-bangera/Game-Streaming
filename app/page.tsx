@@ -134,9 +134,6 @@ export default function HomePage() {
       </div>
 
 
-<<<<<<< HEAD
-     
-=======
       {/* <nav className="relative z-50 flex items-center justify-between px-8 py-6">
         <div className="flex items-center gap-3">
           <Image src="/logo.png" alt='logo' width={100} height={100}/>
@@ -148,7 +145,6 @@ export default function HomePage() {
           LOGIN/SIGNUP
         </button></Link>
       </nav> */}
->>>>>>> 42c92129a62497d2641f4cf963fbdb50f83a5c42
 
 
       <div className="relative z-10 container mx-auto px-8 pt-20 pb-32">
