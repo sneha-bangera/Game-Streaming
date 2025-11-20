@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three-stdlib';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 function ModelViewer({ modelPath }: { modelPath: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -119,6 +120,18 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative mt-15">
+       <Head>
+        <title>Game Streaming Platform – Watch, Play & Explore</title>
+        <meta name="description" content="A modern game streaming platform with authentication, video streams, and discovery features." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="gaming, streaming, game videos, esports, live stream" />
+        <meta property="og:title" content="Game Streaming Platform" />
+        <meta property="og:description" content="Watch and explore top game streams." />
+        <meta property="og:image" content="/banner.jpg" />
+        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="absolute inset-0 opacity-20">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -211,6 +224,14 @@ From jobs to tournaments, it’s the platform where every gamer levels up.
           ].map((game, index) => (
             <div key={index} className="group relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-orange-400 transition-all duration-300 transform hover:scale-105 cursor-pointer">
               <div className="aspect-square  flex items-center justify-center">
+                {/* <Image
+                src={game.image}   
+                alt="Game image"
+                width={800}
+                height={450}
+                className="w-full h-full object-cover"
+                priority={false}  
+              /> */}
                 <img src={game.image} alt="gameImage"  className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
@@ -275,7 +296,15 @@ From jobs to tournaments, it’s the platform where every gamer levels up.
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative  rounded-lg overflow-hidden border border-gray-700 aspect-video flex items-center justify-center">
-           <img src="/main/team-image.jpg" alt="team-photo" />
+           {/* <img src="/main/team-image.jpg" alt="team-photo" /> */}
+           <Image 
+  src="/main/team-image.jpg" 
+  alt="team-photo" 
+  width={800} 
+  height={600} 
+  className="object-cover" 
+/>
+
           </div>
 
           <div className="space-y-6">

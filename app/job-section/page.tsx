@@ -390,7 +390,7 @@ export default function JobPortal() {
                             <span key={index} className="px-3 py-1 glass-card text-gray-300 rounded-full text-xs hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300">
                               {tag}
                             </span>
-                          ))} // Added closing parenthesis here
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -421,7 +421,7 @@ export default function JobPortal() {
               Browse by <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Category</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              All Categories are available here discover your dream team, Let's connect with each other and make organization stable
+              All Categories are available here discover your dream team, Lets connect with each other and make organization stable
             </p>
           </div>
 
@@ -464,7 +464,7 @@ export default function JobPortal() {
                 </span>
               </h2>
               <p className="text-gray-400 mb-6 leading-relaxed text-lg">
-                Whether you're an aspiring esports athlete or a rising creator, HEAVEN gives you the platform, resources, and visibility to grow.
+                Whether you are an aspiring esports athlete or a rising creator, HEAVEN gives you the platform, resources, and visibility to grow.
               </p>
               <button className="bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-500 hover:to-yellow-500 px-8 py-4 rounded-lg transition-all duration-300 font-medium shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105">
                 Know More
